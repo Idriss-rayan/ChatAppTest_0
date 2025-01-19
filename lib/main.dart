@@ -10,24 +10,31 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.blue,
           shadowColor: Colors.black,
-          title: Text("my first app"),
+          title: const Text("My First App"), // "My First App" pour la majuscule
         ),
         body: Padding(
           padding: const EdgeInsets.all(48.0),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment:
+                MainAxisAlignment.end, // Maintenu pour aligner à droite
             children: [
               Column(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment
+                    .end, // Vous pouvez ajuster cela selon vos besoins
                 children: [
                   ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.red),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      ),
                     ),
                     child: const Text(
-                      "continuer",
+                      "Continuer", // Correction de la majuscule
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -44,5 +51,5 @@ class MyApp extends StatelessWidget {
 }
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp()); // Ajout du const pour optimiser la performance
 }
