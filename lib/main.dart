@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/home_pages.dart';
+import 'package:flutter_application_1/pages/login_page.dart';
+import 'package:flutter_application_1/themes/light_mode.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -7,11 +8,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePages(),
+      debugShowCheckedModeBanner: false,
+      home: const LoginPage(),
+      theme: lightMode,
     );
   }
 }
 
 void main() {
-  runApp(const MyApp()); // Ajout du const pour optimiser la performance
+  runApp(MyApp());
 }
