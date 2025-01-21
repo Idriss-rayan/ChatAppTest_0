@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/my_textfield.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -20,7 +21,7 @@ class LoginPage extends StatelessWidget {
             ),
 
             const SizedBox(
-              height: 50,
+              height: 10,
             ),
 
             // Logo message...
@@ -35,7 +36,7 @@ class LoginPage extends StatelessWidget {
               height: 25,
             ),
 
-            TextField(),
+            MyTextfield()
 
             //email textfield
 
