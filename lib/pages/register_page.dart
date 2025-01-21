@@ -2,17 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/my_button.dart';
 import 'package:flutter_application_1/components/my_textfield.dart';
 
-class LoginPage extends StatelessWidget {
-  // email and pw text controllers
+class RegisterPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _pwController = TextEditingController();
+  final TextEditingController _ConfirmpwController = TextEditingController();
 
-  // tap to go to register page
   final void Function()? onTap;
+  RegisterPage({super.key, required this.onTap});
 
-  LoginPage({super.key, required this.onTap});
-
-  void login() {}
+  // ignore: non_constant_identifier_names
+  void Register() {}
 
   @override
   Widget build(BuildContext context) {
@@ -65,13 +64,24 @@ class LoginPage extends StatelessWidget {
             ),
 
             const SizedBox(
+              height: 10,
+            ),
+
+            // confirm password ...
+            MyTextfield(
+              obscuredText: true,
+              hintText: "Confirm Password",
+              controller: _ConfirmpwController,
+            ),
+
+            const SizedBox(
               height: 25,
             ),
 
             // login button
             MyButton(
-              text: 'Login',
-              onTap: login,
+              text: 'Register',
+              onTap: Register,
             ),
 
             const SizedBox(
@@ -83,15 +93,18 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Not a member?",
+                  "Already have an account ",
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
                 GestureDetector(
                   onTap: onTap,
                   child: Text(
-                    " Register now",
+                    "Login now",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
