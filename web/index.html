@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -27,12 +28,47 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>flutter_application_1</title>
   <link rel="manifest" href="manifest.json">
+
+
+  <script type="module">
+
+
+    import { initializeApp } from "firebase/app";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDt9U3iGiJcjjD3ptxurkSV7B5kHVX73JA",
+      authDomain: "rayan123.firebaseapp.com",
+      projectId: "rayan123",
+      storageBucket: "rayan123.firebasestorage.app",
+      messagingSenderId: "285966935804",
+      appId: "1:285966935804:web:701abb0668a6a6e3fcd979"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+
+  </script>
+
+
+
 </head>
+
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <script src="flutter_bootstrap.js" async> </script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"> </script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"> </script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"> </script>
 </body>
+
 </html>
