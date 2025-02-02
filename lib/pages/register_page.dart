@@ -35,7 +35,7 @@ class RegisterPage extends StatelessWidget {
 
             // Logo message...
             Text(
-              "Between Us",
+              "My New App",
               style: TextStyle(
                 color: Theme.of(context).colorScheme.primary,
               ),
